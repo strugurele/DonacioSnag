@@ -8,133 +8,211 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f4f6f8;
             color: #333;
         }
 
         header {
-            background-color: #b71c1c;
+            background: linear-gradient(rgba(183,28,28,0.8), rgba(183,28,28,0.8)),
+                        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b") center/cover;
             color: white;
-            padding: 30px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3em;
         }
 
         section {
-            padding: 40px 20px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
+            padding: 60px 20px;
         }
 
-        .info {
+        h2 {
+            text-align: center;
+            color: #b71c1c;
+            margin-bottom: 40px;
+        }
+
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
             background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card div {
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         .card h3 {
             color: #b71c1c;
+            margin-top: 0;
+        }
+
+        .process {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .process-step img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .cta {
-            background-color: #b71c1c;
+            background: linear-gradient(135deg, #b71c1c, #e53935);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 70px 20px;
         }
 
         .cta button {
             background-color: white;
             color: #b71c1c;
             border: none;
-            padding: 15px 25px;
+            padding: 15px 30px;
             font-size: 1.1em;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            margin-top: 15px;
+            margin-top: 20px;
+            transition: 0.3s;
         }
 
         .cta button:hover {
-            background-color: #f2f2f2;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9em;
+            background-color: #f1f1f1;
         }
 
         .missatge {
             margin-top: 20px;
+            font-size: 1.2em;
             font-weight: bold;
+        }
+
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Campanya de Donació de Sang</h1>
-        <p>Dona sang, salva vides ❤️</p>
-    </header>
+<header>
+    <h1>Campanya de Donació de Sang</h1>
+    <p>Dona sang avui, salva vides demà ❤️</p>
+</header>
 
-    <section>
-        <h2>Per què és important donar sang?</h2>
-        <div class="info">
-            <div class="card">
+<section>
+    <h2>Per què donar sang?</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
+            <div>
                 <h3>Salva vides</h3>
-                <p>Amb una sola donació pots ajudar fins a tres persones.</p>
-            </div>
-            <div class="card">
-                <h3>És segur</h3>
-                <p>El procés és ràpid, segur i supervisat per professionals sanitaris.</p>
-            </div>
-            <div class="card">
-                <h3>La sang no es pot fabricar</h3>
-                <p>Només les persones poden donar sang per ajudar els altres.</p>
+                <p>Una sola donació pot ajudar fins a tres persones diferents.</p>
             </div>
         </div>
-    </section>
 
-    <section>
-        <h2>Qui pot donar sang?</h2>
-        <ul>
-            <li>Persones entre 18 i 70 anys</li>
-            <li>Pesar més de 50 kg</li>
-            <li>Ganar-se bé de salut</li>
-        </ul>
-    </section>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1">
+            <div>
+                <h3>Procés segur</h3>
+                <p>Tot el procés és controlat per professionals sanitaris.</p>
+            </div>
+        </div>
 
-    <section class="cta">
-        <h2>Uneix-te a la campanya</h2>
-        <p>Fes el primer pas i ajuda a salvar vides avui mateix.</p>
-        <button onclick="mostrarMissatge()">Vull donar sang</button>
-        <div id="missatge" class="missatge"></div>
-    </section>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+            <div>
+                <h3>No es pot fabricar</h3>
+                <p>La sang només pot provenir de persones solidàries com tu.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>© 2026 Campanya de Donació de Sang · Catalunya</p>
-    </footer>
+<section>
+    <h2>Com és el procés de donació?</h2>
+    <div class="process">
+        <div class="process-step">
+            <img src="https://images.unsplash.com/photo-1603398938378-e54a58a8d9a7">
+            <p><strong>1. Registre</strong> – Omples un petit formulari amb les teves dades.</p>
+        </div>
 
-    <script>
-        function mostrarMissatge() {
-            const missatge = document.getElementById("missatge");
-            missatge.textContent = "Gràcies per voler donar sang! Consulta el centre més proper.";
-        }
-    </script>
+        <div class="process-step">
+            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
+            <p><strong>2. Revisió mèdica</strong> – Es comprova que puguis donar sang.</p>
+        </div>
+
+        <div class="process-step">
+            <img src="https://images.unsplash.com/photo-1582719478174-2b74f7b2f6f1">
+            <p><strong>3. Donació</strong> – El procés dura uns 10 minuts.</p>
+        </div>
+
+        <div class="process-step">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+            <p><strong>4. Recuperació</strong> – Descans i petit refrigeri.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Fes-te donant avui</h2>
+    <p>El teu gest pot marcar la diferència.</p>
+    <button onclick="mostrarMissatge()">Vull donar sang</button>
+    <div id="missatge" class="missatge"></div>
+</section>
+
+<footer>
+    <p>© 2026 Campanya de Donació de Sang · Catalunya</p>
+    <p><strong>by Strugaru David Development</strong></p>
+</footer>
+
+<script>
+    function mostrarMissatge() {
+        document.getElementById("missatge").textContent =
+            "Gràcies per la teva solidaritat! Busca el centre de donació més proper.";
+    }
+</script>
 
 </body>
 </html>
