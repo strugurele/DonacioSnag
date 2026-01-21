@@ -2,263 +2,329 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
-<title>Donació de Sang | IES Severo Ochoa</title>
+<title>Donació de Sang | IES Severo Ochoa Elx</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ================== CSS ================== -->
 <style>
 :root{
-    --red:#e53935;
-    --dark:#111;
-    --light:#f7f7f7;
+  --primary:#1e88e5;
+  --secondary:#64b5f6;
+  --dark:#1f1f1f;
+  --light:#f4f7fa;
+  --card:#ffffff;
 }
 
 *{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    font-family:'Poppins',system-ui,sans-serif;
-    background:var(--light);
-    color:#222;
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:var(--light);
+  color:#333;
 }
 
-/* ---------- HERO ---------- */
+/* ===== HERO ===== */
 header{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
-    background:
-        linear-gradient(135deg,rgba(229,57,53,.85),rgba(183,28,28,.9)),
-        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b") center/cover;
-    color:white;
+  min-height:100vh;
+  background:
+    linear-gradient(135deg,rgba(30,136,229,.85),rgba(30,136,229,.9)),
+    url("https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1") center/cover;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
 }
 
 header h1{
-    font-size:clamp(2.2rem,5vw,3.5rem);
-    margin-bottom:10px;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  margin-bottom:10px;
 }
 
 header p{
-    font-size:1.3rem;
-    max-width:600px;
+  font-size:1.2rem;
+  max-width:700px;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ===== SECTIONS ===== */
 section{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
 }
 
 section h2{
-    text-align:center;
-    font-size:2.2rem;
-    margin-bottom:50px;
-    color:var(--red);
+  text-align:center;
+  font-size:2.1rem;
+  margin-bottom:45px;
+  color:var(--primary);
 }
 
-/* ---------- CARDS ---------- */
+/* ===== TEXT ===== */
+.text{
+  max-width:900px;
+  margin:auto;
+  line-height:1.7;
+  font-size:1.05rem;
+}
+
+/* ===== GRID / CARDS ===== */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 .card{
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 15px 30px rgba(0,0,0,.1);
-    transition:.4s;
+  background:var(--card);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.1);
+  transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+  transform:translateY(-8px);
 }
 
 .card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+  width:100%;
+  height:190px;
+  object-fit:cover;
 }
 
 .card div{
-    padding:25px;
+  padding:25px;
 }
 
 .card h3{
-    margin-top:0;
-    color:var(--red);
+  margin-top:0;
+  color:var(--primary);
 }
 
-/* ---------- PROCESS ---------- */
-.process{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+/* ===== LIST ===== */
+.list{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  font-size:1.05rem;
 }
 
-.step{
-    background:white;
-    padding:25px;
-    border-radius:14px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    text-align:center;
-}
-
-.step img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-/* ---------- CTA ---------- */
+/* ===== CTA ===== */
 .cta{
-    background:linear-gradient(135deg,#b71c1c,#e53935);
-    color:white;
-    text-align:center;
-    padding:90px 20px;
-    border-radius:25px;
+  background:linear-gradient(135deg,#1e88e5,#1565c0);
+  color:white;
+  text-align:center;
+  padding:90px 20px;
+  border-radius:24px;
 }
 
 .cta button{
-    margin-top:25px;
-    padding:16px 40px;
-    border:none;
-    border-radius:40px;
-    font-size:1.1rem;
-    cursor:pointer;
-    background:white;
-    color:var(--red);
-    transition:.3s;
+  background:white;
+  color:var(--primary);
+  border:none;
+  padding:16px 40px;
+  font-size:1.1rem;
+  border-radius:40px;
+  cursor:pointer;
+  margin-top:25px;
+  transition:.3s;
 }
 
 .cta button:hover{
-    transform:scale(1.05);
+  transform:scale(1.05);
 }
 
-#msg{
-    margin-top:20px;
-    font-weight:600;
+/* ===== CALENDAR ===== */
+.calendar-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:30px;
 }
 
-/* ---------- MAP ---------- */
+.calendar-buttons a{
+  background:white;
+  color:var(--primary);
+  padding:14px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 15px rgba(0,0,0,.2);
+  transition:.3s;
+}
+
+.calendar-buttons a:hover{
+  transform:scale(1.05);
+}
+
+/* ===== MAP ===== */
 iframe{
-    width:100%;
-    height:350px;
-    border:none;
-    border-radius:20px;
-    margin-top:40px;
+  width:100%;
+  height:350px;
+  border:none;
+  border-radius:20px;
+  margin-top:40px;
 }
 
-/* ---------- FOOTER ---------- */
+/* ===== FOOTER ===== */
 footer{
-    background:var(--dark);
-    color:white;
-    text-align:center;
-    padding:30px 15px;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  font-size:.9rem;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ===== RESPONSIVE ===== */
 @media(max-width:600px){
-    header p{
-        font-size:1.1rem;
-    }
+  section h2{font-size:1.6rem;}
+  header p{font-size:1.05rem;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================== HERO ================== -->
 <header>
-    <h1>Donació de Sang 🎗️</h1>
-    <p><strong>IES Severo Ochoa · Elx</strong><br>📅 29 de gener</p>
+  <h1>Donació de Sang 🩺</h1>
+  <p>
+    IES Severo Ochoa · Elx<br>
+    <strong>29 de gener de 2026</strong><br>
+    9:30-13:30 · 16:30-20:30<br>
+    Saló d’Actes
+  </p>
 </header>
 
-<!-- ================== INFO ================== -->
 <section>
-<h2>Per què donar sang?</h2>
+<h2>Què és la sang?</h2>
+<p class="text">
+La sang és un teixit líquid fonamental per a la vida. Transporta oxigen, nutrients i hormones, elimina substàncies de rebuig, ajuda a combatre infeccions i manté l’equilibri del cos humà. Sense sang suficient, els òrgans vitals no poden funcionar correctament.
+</p>
+</section>
+
+<section>
+<h2>Història de la donació de sang</h2>
+<p class="text">
+Les primeres transfusions daten del segle XVII, però no va ser fins al segle XX quan es van descobrir els grups sanguinis i es va garantir la seguretat del procés. Hui dia, la donació de sang és voluntària, altruista i essencial per al sistema sanitari.
+</p>
+</section>
+
+<section>
+<h2>Per què és important donar sang?</h2>
 <div class="grid">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
-        <div>
-            <h3>Salva vides</h3>
-            <p>Amb una sola donació pots ajudar fins a tres persones.</p>
-        </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
+    <div>
+      <h3>Salva vides</h3>
+      <p>Una sola donació pot ajudar fins a tres persones.</p>
     </div>
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1">
-        <div>
-            <h3>Procés segur</h3>
-            <p>Supervisat per personal sanitari qualificat.</p>
-        </div>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
+    <div>
+      <h3>Necessària cada dia</h3>
+      <p>La sang és imprescindible per a cirurgies i emergències.</p>
     </div>
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
-        <div>
-            <h3>Acte solidari</h3>
-            <p>La sang no es pot fabricar, només es pot donar.</p>
-        </div>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+    <div>
+      <h3>No es pot fabricar</h3>
+      <p>Només la solidaritat humana pot proporcionar-la.</p>
     </div>
+  </div>
 </div>
 </section>
 
-<!-- ================== REQUIREMENTS ================== -->
 <section>
-<h2>Requisits per donar sang</h2>
-<div class="process">
-    <div class="step">
-        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
-        <p>✔️ Tenir entre <strong>18 i 70 anys</strong></p>
-    </div>
-    <div class="step">
-        <img src="https://images.unsplash.com/photo-1603398938378-e54a58a8d9a7">
-        <p>✔️ Pesar més de <strong>50 kg</strong></p>
-    </div>
-    <div class="step">
-        <img src="https://images.unsplash.com/photo-1582719478174-2b74f7b2f6f1">
-        <p>✔️ Trobar-se <strong>bé de salut</strong></p>
-    </div>
-    <div class="step">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-        <p>✔️ No anar en dejú</p>
-    </div>
-</div>
+<h2>Per a què serveix la sang donada?</h2>
+<p class="text">
+La sang donada s’utilitza en operacions quirúrgiques, tractaments oncològics, accidents greus, parts complicats, malalties hematològiques i situacions d’emergència sanitària.
+</p>
 </section>
 
-<!-- ================== CTA + MAP ================== -->
+<section>
+<h2>Dades de donació a la Comunitat Valenciana i Espanya</h2>
+<p class="text">
+A la Comunitat Valenciana es recullen anualment més de <strong>170.000 unitats de sang</strong> gràcies a la col·laboració de milers de donants.  
+A Espanya, la donació regular permet mantenir reserves estables per a hospitals i centres sanitaris de tot el país.
+</p>
+</section>
+
+<section>
+<h2>Requisits generals per a donar sang</h2>
+<ul class="list">
+  <li>✔️ Tindre entre 18 i 65 anys</li>
+  <li>✔️ Pesar més de 50 kg</li>
+  <li>✔️ Trobar-se bé de salut</li>
+  <li>✔️ No acudir en dejú</li>
+  <li>✔️ Passar una revisió mèdica prèvia</li>
+</ul>
+</section>
+
 <section class="cta">
-    <h2>Participa-hi ❤️</h2>
-    <p>Un petit gest pot canviar moltes vides</p>
-    <button onclick="confirmar()">Vull donar sang</button>
-    <div id="msg"></div>
+<h2>Agenda-ho i participa ❤️</h2>
+<p>
+📍 Saló d’Actes IES Severo Ochoa<br>
+📅 29 de gener de 2026<br>
+⏰ 9:30-13:30 · 16:30-20:30
+</p>
 
-    <iframe 
-        src="https://www.google.com/maps?q=IES+Severo+Ochoa+Elche&output=embed"
-        loading="lazy">
-    </iframe>
+<button onclick="confirmar()">Sí, vull donar sang</button>
+<p id="confirmMsg"></p>
+
+<div class="calendar-buttons">
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Donació+de+Sang+-+IES+Severo+Ochoa&dates=20260129T083000Z/20260129T193000Z&details=Campanya+de+donació+de+sang&location=IES+Severo+Ochoa+Elx" target="_blank">
+    📅 Google Calendar
+  </a>
+  <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Donació de Sang - IES Severo Ochoa&startdt=2026-01-29T09:30&enddt=2026-01-29T20:30&location=IES Severo Ochoa Elx">
+    💼 Outlook
+  </a>
+  <a href="#" onclick="downloadICS()">🍎 Apple / iCal</a>
+</div>
+
+<iframe
+  src="https://www.google.com/maps?q=IES+Severo+Ochoa+Elche&output=embed"
+  loading="lazy">
+</iframe>
 </section>
 
-<!-- ================== FOOTER ================== -->
 <footer>
-    <p>by <strong>Strugaru David Development</strong></p>
+  by <strong>Strugaru David Development</strong>
 </footer>
 
-<!-- ================== JS ================== -->
 <script>
 function confirmar(){
-    document.getElementById("msg").innerHTML =
-    "Gràcies! T’esperem el <strong>29 de gener</strong> al IES Severo Ochoa 🌟";
+  document.getElementById("confirmMsg").innerHTML =
+  "Gràcies per la teua solidaritat! T’esperem el 29 de gener 😊";
+}
+
+function downloadICS(){
+  const data = `
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Donació de Sang - IES Severo Ochoa
+DTSTART:20260129T093000
+DTEND:20260129T203000
+LOCATION:Saló d’Actes IES Severo Ochoa, Elx
+DESCRIPTION:Campanya de donació de sang
+END:VEVENT
+END:VCALENDAR`;
+  const blob = new Blob([data], { type: 'text/calendar' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "donacio_sang_ies_severo_ochoa.ics";
+  a.click();
+  URL.revokeObjectURL(url);
 }
 </script>
 
