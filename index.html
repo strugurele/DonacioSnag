@@ -1,217 +1,265 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <title>Campanya de Donació de Sang</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Donació de Sang | IES Severo Ochoa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-        }
+<!-- ================== CSS ================== -->
+<style>
+:root{
+    --red:#e53935;
+    --dark:#111;
+    --light:#f7f7f7;
+}
 
-        header {
-            background: linear-gradient(rgba(183,28,28,0.8), rgba(183,28,28,0.8)),
-                        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b") center/cover;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+body{
+    margin:0;
+    font-family:'Poppins',system-ui,sans-serif;
+    background:var(--light);
+    color:#222;
+}
 
-        header p {
-            font-size: 1.3em;
-        }
+/* ---------- HERO ---------- */
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+        linear-gradient(135deg,rgba(229,57,53,.85),rgba(183,28,28,.9)),
+        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b") center/cover;
+    color:white;
+}
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+header h1{
+    font-size:clamp(2.2rem,5vw,3.5rem);
+    margin-bottom:10px;
+}
 
-        h2 {
-            text-align: center;
-            color: #b71c1c;
-            margin-bottom: 40px;
-        }
+header p{
+    font-size:1.3rem;
+    max-width:600px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+/* ---------- SECTIONS ---------- */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+section h2{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:50px;
+    color:var(--red);
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+/* ---------- CARDS ---------- */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,.1);
+    transition:.4s;
+}
 
-        .card div {
-            padding: 20px;
-        }
+.card:hover{
+    transform:translateY(-8px);
+}
 
-        .card h3 {
-            color: #b71c1c;
-            margin-top: 0;
-        }
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
 
-        .process {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+.card div{
+    padding:25px;
+}
 
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            gap: 20px;
-        }
+.card h3{
+    margin-top:0;
+    color:var(--red);
+}
 
-        .process-step img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+/* ---------- PROCESS ---------- */
+.process{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
 
-        .cta {
-            background: linear-gradient(135deg, #b71c1c, #e53935);
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+.step{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    text-align:center;
+}
 
-        .cta button {
-            background-color: white;
-            color: #b71c1c;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
+.step img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
 
-        .cta button:hover {
-            background-color: #f1f1f1;
-        }
+/* ---------- CTA ---------- */
+.cta{
+    background:linear-gradient(135deg,#b71c1c,#e53935);
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+    border-radius:25px;
+}
 
-        .missatge {
-            margin-top: 20px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
+.cta button{
+    margin-top:25px;
+    padding:16px 40px;
+    border:none;
+    border-radius:40px;
+    font-size:1.1rem;
+    cursor:pointer;
+    background:white;
+    color:var(--red);
+    transition:.3s;
+}
 
-        footer {
-            background-color: #111;
-            color: #bbb;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-    </style>
+.cta button:hover{
+    transform:scale(1.05);
+}
+
+#msg{
+    margin-top:20px;
+    font-weight:600;
+}
+
+/* ---------- MAP ---------- */
+iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:20px;
+    margin-top:40px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:600px){
+    header p{
+        font-size:1.1rem;
+    }
+}
+</style>
 </head>
+
 <body>
 
+<!-- ================== HERO ================== -->
 <header>
-    <h1>Campanya de Donació de Sang</h1>
-    <p>Dona sang avui, salva vides demà ❤️</p>
+    <h1>Donació de Sang 🎗️</h1>
+    <p><strong>IES Severo Ochoa · Elx</strong><br>📅 29 de gener</p>
 </header>
 
+<!-- ================== INFO ================== -->
 <section>
-    <h2>Per què donar sang?</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
-            <div>
-                <h3>Salva vides</h3>
-                <p>Una sola donació pot ajudar fins a tres persones diferents.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1">
-            <div>
-                <h3>Procés segur</h3>
-                <p>Tot el procés és controlat per professionals sanitaris.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
-            <div>
-                <h3>No es pot fabricar</h3>
-                <p>La sang només pot provenir de persones solidàries com tu.</p>
-            </div>
+<h2>Per què donar sang?</h2>
+<div class="grid">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
+        <div>
+            <h3>Salva vides</h3>
+            <p>Amb una sola donació pots ajudar fins a tres persones.</p>
         </div>
     </div>
-</section>
-
-<section>
-    <h2>Com és el procés de donació?</h2>
-    <div class="process">
-        <div class="process-step">
-            <img src="https://images.unsplash.com/photo-1603398938378-e54a58a8d9a7">
-            <p><strong>1. Registre</strong> – Omples un petit formulari amb les teves dades.</p>
-        </div>
-
-        <div class="process-step">
-            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
-            <p><strong>2. Revisió mèdica</strong> – Es comprova que puguis donar sang.</p>
-        </div>
-
-        <div class="process-step">
-            <img src="https://images.unsplash.com/photo-1582719478174-2b74f7b2f6f1">
-            <p><strong>3. Donació</strong> – El procés dura uns 10 minuts.</p>
-        </div>
-
-        <div class="process-step">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-            <p><strong>4. Recuperació</strong> – Descans i petit refrigeri.</p>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1">
+        <div>
+            <h3>Procés segur</h3>
+            <p>Supervisat per personal sanitari qualificat.</p>
         </div>
     </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+        <div>
+            <h3>Acte solidari</h3>
+            <p>La sang no es pot fabricar, només es pot donar.</p>
+        </div>
+    </div>
+</div>
 </section>
 
+<!-- ================== REQUIREMENTS ================== -->
+<section>
+<h2>Requisits per donar sang</h2>
+<div class="process">
+    <div class="step">
+        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
+        <p>✔️ Tenir entre <strong>18 i 70 anys</strong></p>
+    </div>
+    <div class="step">
+        <img src="https://images.unsplash.com/photo-1603398938378-e54a58a8d9a7">
+        <p>✔️ Pesar més de <strong>50 kg</strong></p>
+    </div>
+    <div class="step">
+        <img src="https://images.unsplash.com/photo-1582719478174-2b74f7b2f6f1">
+        <p>✔️ Trobar-se <strong>bé de salut</strong></p>
+    </div>
+    <div class="step">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+        <p>✔️ No anar en dejú</p>
+    </div>
+</div>
+</section>
+
+<!-- ================== CTA + MAP ================== -->
 <section class="cta">
-    <h2>Fes-te donant avui</h2>
-    <p>El teu gest pot marcar la diferència.</p>
-    <button onclick="mostrarMissatge()">Vull donar sang</button>
-    <div id="missatge" class="missatge"></div>
+    <h2>Participa-hi ❤️</h2>
+    <p>Un petit gest pot canviar moltes vides</p>
+    <button onclick="confirmar()">Vull donar sang</button>
+    <div id="msg"></div>
+
+    <iframe 
+        src="https://www.google.com/maps?q=IES+Severo+Ochoa+Elche&output=embed"
+        loading="lazy">
+    </iframe>
 </section>
 
+<!-- ================== FOOTER ================== -->
 <footer>
-    <p>© 2026 Campanya de Donació de Sang</p>
-    <p><strong>by Strugaru David Development</strong></p>
+    <p>by <strong>Strugaru David Development</strong></p>
 </footer>
 
+<!-- ================== JS ================== -->
 <script>
-    function mostrarMissatge() {
-        document.getElementById("missatge").textContent =
-            "Gràcies per la teva solidaritat! Busca el centre de donació més proper.";
-    }
+function confirmar(){
+    document.getElementById("msg").innerHTML =
+    "Gràcies! T’esperem el <strong>29 de gener</strong> al IES Severo Ochoa 🌟";
+}
 </script>
 
 </body>
