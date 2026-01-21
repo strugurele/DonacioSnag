@@ -7,10 +7,10 @@
 
 <style>
 :root{
-  --primary:#1e88e5;
-  --secondary:#64b5f6;
-  --dark:#1f1f1f;
-  --light:#f4f7fa;
+  --primary:#b11226;        /* roig sang */
+  --secondary:#e53935;
+  --dark:#1c1c1c;
+  --light:#f6f6f6;
   --card:#ffffff;
 }
 
@@ -21,7 +21,7 @@
 
 body{
   margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family:"Segoe UI", Arial, sans-serif;
   background:var(--light);
   color:#333;
 }
@@ -30,7 +30,7 @@ body{
 header{
   min-height:100vh;
   background:
-    linear-gradient(135deg,rgba(30,136,229,.85),rgba(30,136,229,.9)),
+    linear-gradient(135deg,rgba(177,18,38,.9),rgba(229,57,53,.9)),
     url("https://images.unsplash.com/photo-1580281657527-47a1c7c7c0a1") center/cover;
   color:white;
   display:flex;
@@ -42,7 +42,7 @@ header{
 }
 
 header h1{
-  font-size:clamp(2.2rem,5vw,3.4rem);
+  font-size:clamp(2.3rem,5vw,3.6rem);
   margin-bottom:10px;
 }
 
@@ -60,7 +60,7 @@ section{
 
 section h2{
   text-align:center;
-  font-size:2.1rem;
+  font-size:2.2rem;
   margin-bottom:45px;
   color:var(--primary);
 }
@@ -69,7 +69,7 @@ section h2{
 .text{
   max-width:900px;
   margin:auto;
-  line-height:1.7;
+  line-height:1.75;
   font-size:1.05rem;
 }
 
@@ -82,14 +82,14 @@ section h2{
 
 .card{
   background:var(--card);
-  border-radius:16px;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 12px 30px rgba(0,0,0,.1);
+  box-shadow:0 14px 35px rgba(0,0,0,.15);
   transition:.4s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
 }
 
 .card img{
@@ -99,7 +99,7 @@ section h2{
 }
 
 .card div{
-  padding:25px;
+  padding:26px;
 }
 
 .card h3{
@@ -109,26 +109,26 @@ section h2{
 
 /* ===== LIST ===== */
 .list{
-  max-width:700px;
+  max-width:750px;
   margin:auto;
-  line-height:1.8;
+  line-height:1.9;
   font-size:1.05rem;
 }
 
 /* ===== CTA ===== */
 .cta{
-  background:linear-gradient(135deg,#1e88e5,#1565c0);
+  background:linear-gradient(135deg,#b11226,#e53935);
   color:white;
   text-align:center;
-  padding:90px 20px;
-  border-radius:24px;
+  padding:95px 20px;
+  border-radius:28px;
 }
 
 .cta button{
   background:white;
   color:var(--primary);
   border:none;
-  padding:16px 40px;
+  padding:16px 42px;
   font-size:1.1rem;
   border-radius:40px;
   cursor:pointer;
@@ -137,7 +137,7 @@ section h2{
 }
 
 .cta button:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 /* ===== CALENDAR ===== */
@@ -145,40 +145,40 @@ section h2{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:15px;
-  margin-top:30px;
+  gap:16px;
+  margin-top:32px;
 }
 
 .calendar-buttons a{
   background:white;
   color:var(--primary);
-  padding:14px 22px;
+  padding:14px 24px;
   border-radius:30px;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 6px 15px rgba(0,0,0,.2);
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
   transition:.3s;
 }
 
 .calendar-buttons a:hover{
-  transform:scale(1.05);
+  transform:scale(1.06);
 }
 
 /* ===== MAP ===== */
 iframe{
   width:100%;
-  height:350px;
+  height:360px;
   border:none;
-  border-radius:20px;
+  border-radius:22px;
   margin-top:40px;
 }
 
 /* ===== FOOTER ===== */
 footer{
-  background:#0f172a;
+  background:#0f0f0f;
   color:white;
   text-align:center;
-  padding:30px 15px;
+  padding:32px 15px;
   font-size:.9rem;
 }
 
@@ -193,11 +193,11 @@ footer{
 <body>
 
 <header>
-  <h1>Donació de Sang 🩺</h1>
+  <h1>Donació de Sang 🩸</h1>
   <p>
     IES Severo Ochoa · Elx<br>
     <strong>29 de gener de 2026</strong><br>
-    9:30-13:30 · 16:30-20:30<br>
+    9:30–13:30 · 16:30–20:30<br>
     Saló d’Actes
   </p>
 </header>
@@ -205,14 +205,14 @@ footer{
 <section>
 <h2>Què és la sang?</h2>
 <p class="text">
-La sang és un teixit líquid fonamental per a la vida. Transporta oxigen, nutrients i hormones, elimina substàncies de rebuig, ajuda a combatre infeccions i manté l’equilibri del cos humà. Sense sang suficient, els òrgans vitals no poden funcionar correctament.
+La sang és un teixit líquid vital que transporta oxigen, nutrients i hormones, elimina residus metabòlics, defensa el cos contra infeccions i manté l’equilibri de l’organisme. És imprescindible per a la vida.
 </p>
 </section>
 
 <section>
 <h2>Història de la donació de sang</h2>
 <p class="text">
-Les primeres transfusions daten del segle XVII, però no va ser fins al segle XX quan es van descobrir els grups sanguinis i es va garantir la seguretat del procés. Hui dia, la donació de sang és voluntària, altruista i essencial per al sistema sanitari.
+Les primeres transfusions es remunten al segle XVII, però no va ser fins al segle XX quan el descobriment dels grups sanguinis va permetre fer-les de manera segura. Hui, la donació és voluntària, anònima i altruista.
 </p>
 </section>
 
@@ -223,21 +223,21 @@ Les primeres transfusions daten del segle XVII, però no va ser fins al segle XX
     <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4">
     <div>
       <h3>Salva vides</h3>
-      <p>Una sola donació pot ajudar fins a tres persones.</p>
+      <p>Una sola donació pot ajudar fins a tres persones diferents.</p>
     </div>
   </div>
   <div class="card">
     <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c">
     <div>
       <h3>Necessària cada dia</h3>
-      <p>La sang és imprescindible per a cirurgies i emergències.</p>
+      <p>Essencial en cirurgies, accidents i tractaments mèdics.</p>
     </div>
   </div>
   <div class="card">
     <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
     <div>
       <h3>No es pot fabricar</h3>
-      <p>Només la solidaritat humana pot proporcionar-la.</p>
+      <p>Només la solidaritat de les persones pot proporcionar-la.</p>
     </div>
   </div>
 </div>
@@ -246,15 +246,15 @@ Les primeres transfusions daten del segle XVII, però no va ser fins al segle XX
 <section>
 <h2>Per a què serveix la sang donada?</h2>
 <p class="text">
-La sang donada s’utilitza en operacions quirúrgiques, tractaments oncològics, accidents greus, parts complicats, malalties hematològiques i situacions d’emergència sanitària.
+La sang donada s’utilitza en intervencions quirúrgiques, tractaments oncològics, parts complicats, malalties hematològiques, accidents greus i situacions d’emergència sanitària.
 </p>
 </section>
 
 <section>
 <h2>Dades de donació a la Comunitat Valenciana i Espanya</h2>
 <p class="text">
-A la Comunitat Valenciana es recullen anualment més de <strong>170.000 unitats de sang</strong> gràcies a la col·laboració de milers de donants.  
-A Espanya, la donació regular permet mantenir reserves estables per a hospitals i centres sanitaris de tot el país.
+A la Comunitat Valenciana es recullen anualment més de <strong>170.000 unitats de sang</strong>.  
+A Espanya, la donació regular permet garantir reserves suficients per als hospitals de tot el territori.
 </p>
 </section>
 
@@ -265,7 +265,7 @@ A Espanya, la donació regular permet mantenir reserves estables per a hospitals
   <li>✔️ Pesar més de 50 kg</li>
   <li>✔️ Trobar-se bé de salut</li>
   <li>✔️ No acudir en dejú</li>
-  <li>✔️ Passar una revisió mèdica prèvia</li>
+  <li>✔️ Superar una revisió mèdica prèvia</li>
 </ul>
 </section>
 
@@ -274,7 +274,7 @@ A Espanya, la donació regular permet mantenir reserves estables per a hospitals
 <p>
 📍 Saló d’Actes IES Severo Ochoa<br>
 📅 29 de gener de 2026<br>
-⏰ 9:30-13:30 · 16:30-20:30
+⏰ 9:30–13:30 · 16:30–20:30
 </p>
 
 <button onclick="confirmar()">Sí, vull donar sang</button>
@@ -303,7 +303,7 @@ A Espanya, la donació regular permet mantenir reserves estables per a hospitals
 <script>
 function confirmar(){
   document.getElementById("confirmMsg").innerHTML =
-  "Gràcies per la teua solidaritat! T’esperem el 29 de gener 😊";
+  "Gràcies per la teua solidaritat! T’esperem el 29 de gener 🩸";
 }
 
 function downloadICS(){
@@ -322,7 +322,7 @@ END:VCALENDAR`;
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "donacio_sang_ies_severo_ochoa.ics";
+  a.download = "donacio_sang_severo_ochoa.ics";
   a.click();
   URL.revokeObjectURL(url);
 }
