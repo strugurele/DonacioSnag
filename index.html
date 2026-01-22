@@ -14,7 +14,6 @@
   --card:#ffffff;
 }
 
-/* MODE FOSC AUTOMÀTIC */
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0f0f0f;
@@ -23,10 +22,7 @@
   }
 }
 
-*{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box;scroll-behavior:smooth;}
 
 body{
   margin:0;
@@ -35,12 +31,12 @@ body{
   color:var(--text);
 }
 
-/* ===== MENU ===== */
+/* MENU */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(15,15,15,.85);
+  background:rgba(15,15,15,.9);
   backdrop-filter:blur(10px);
   z-index:1000;
 }
@@ -48,33 +44,21 @@ nav{
 nav ul{
   display:flex;
   justify-content:center;
-  gap:30px;
-  list-style:none;
-  padding:15px;
+  gap:28px;
+  padding:14px;
   margin:0;
+  list-style:none;
 }
 
 nav a{
   color:white;
   text-decoration:none;
   font-weight:500;
-  position:relative;
 }
 
-nav a::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:2px;
-  background:var(--secondary);
-  left:0;
-  bottom:-5px;
-  transition:.3s;
-}
+nav a:hover{color:var(--secondary);}
 
-nav a:hover::after{ width:100%; }
-
-/* ===== HERO ===== */
+/* HERO */
 header{
   min-height:100vh;
   background:
@@ -90,21 +74,17 @@ header{
 }
 
 header h1{
-  font-size:clamp(2.6rem,5vw,4rem);
-  animation:fadeDown 1.2s ease;
-  text-shadow:0 0 25px rgba(255,80,80,.6);
+  font-size:clamp(2.5rem,5vw,3.8rem);
+  text-shadow:0 0 20px rgba(255,80,80,.6);
 }
 
-header p{
-  font-size:1.2rem;
-  animation:fadeUp 1.4s ease;
-}
+header p{font-size:1.2rem}
 
-/* ===== COUNTDOWN ===== */
+/* COUNTDOWN */
 #countdown{
   display:flex;
   gap:18px;
-  margin-top:40px;
+  margin-top:35px;
   flex-wrap:wrap;
   justify-content:center;
 }
@@ -114,14 +94,13 @@ header p{
   padding:18px 22px;
   border-radius:18px;
   min-width:90px;
-  box-shadow:0 0 20px rgba(255,80,80,.45);
-  animation:pulse 3s infinite;
+  box-shadow:0 0 20px rgba(255,80,80,.5);
 }
 
 .time span{
-  display:block;
   font-size:2rem;
   font-weight:bold;
+  display:block;
 }
 
 .time small{
@@ -129,12 +108,11 @@ header p{
   text-transform:uppercase;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{
   max-width:1100px;
   margin:auto;
   padding:90px 20px;
-  animation:fadeUp 1.2s ease;
 }
 
 section h2{
@@ -142,7 +120,6 @@ section h2{
   color:var(--primary);
   font-size:2.2rem;
   margin-bottom:40px;
-  text-shadow:0 0 10px rgba(177,18,38,.4);
 }
 
 .text{
@@ -152,7 +129,49 @@ section h2{
   font-size:1.05rem;
 }
 
-/* ===== FOOTER ===== */
+/* LIST */
+ul.list{
+  max-width:750px;
+  margin:auto;
+  line-height:1.9;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#b11226,#e53935);
+  color:white;
+  text-align:center;
+  padding:90px 20px;
+  border-radius:28px;
+}
+
+.calendar-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+  margin-top:30px;
+}
+
+.calendar-buttons a{
+  background:white;
+  color:var(--primary);
+  padding:14px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* MAP */
+iframe{
+  width:100%;
+  height:360px;
+  border:none;
+  border-radius:22px;
+  margin-top:40px;
+}
+
+/* FOOTER */
 footer{
   background:#0a0a0a;
   color:white;
@@ -160,11 +179,10 @@ footer{
   padding:70px 20px;
 }
 
-/* FRASE FINAL */
 .final-phrase{
   opacity:0;
   transform:translateY(40px);
-  transition:1.5s ease;
+  transition:1.4s ease;
 }
 
 .final-phrase.show{
@@ -172,25 +190,9 @@ footer{
   transform:translateY(0);
 }
 
-/* ===== ANIMACIONS ===== */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes fadeDown{
-  from{opacity:0;transform:translateY(-40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 15px rgba(255,80,80,.3);}
-  50%{box-shadow:0 0 35px rgba(255,80,80,.7);}
-}
-
 /* RESPONSIVE */
 @media(max-width:600px){
-  nav ul{flex-wrap:wrap;gap:15px;}
+  nav ul{flex-wrap:wrap;gap:14px;}
   section h2{font-size:1.6rem;}
 }
 </style>
@@ -202,6 +204,7 @@ footer{
 <ul>
   <li><a href="#inici">Inici</a></li>
   <li><a href="#info">Informació</a></li>
+  <li><a href="#requisits">Requisits</a></li>
   <li><a href="#agenda">Agenda</a></li>
 </ul>
 </nav>
@@ -223,21 +226,46 @@ footer{
 </header>
 
 <section id="info">
-<h2>Per què donar sang?</h2>
+<h2>Informació sobre la donació</h2>
 <p class="text">
-Donar sang és un acte solidari i imprescindible. La sang no es pot fabricar
-artificialment i és essencial en operacions, accidents, tractaments oncològics
-i emergències mèdiques.
+La sang és un teixit líquid vital que transporta oxigen i nutrients, elimina residus
+i defensa el cos contra infeccions. La donació de sang és un acte voluntari, anònim
+i altruista que salva vides cada dia.
+<br><br>
+La sang donada s’utilitza en cirurgies, accidents, tractaments oncològics,
+parts complicats i malalties hematològiques.
+<br><br>
+A la Comunitat Valenciana es recullen anualment més de <strong>170.000 unitats</strong>
+de sang. A Espanya, la donació regular permet mantindre les reserves hospitalàries.
 </p>
 </section>
 
-<section id="agenda">
-<h2>Quan i on?</h2>
-<p class="text" style="text-align:center">
+<section id="requisits">
+<h2>Requisits generals</h2>
+<ul class="list">
+  <li>✔️ Tindre entre 18 i 65 anys</li>
+  <li>✔️ Pesar més de 50 kg</li>
+  <li>✔️ Trobar-se bé de salut</li>
+  <li>✔️ No vindre en dejú</li>
+  <li>✔️ Superar una breu revisió mèdica</li>
+</ul>
+</section>
+
+<section id="agenda" class="cta">
+<h2>Agenda-ho i participa ❤️</h2>
+<p>
 📍 Saló d’Actes IES Severo Ochoa, Elx<br>
 📅 29 de gener de 2026<br>
 ⏰ 9:30–13:30 · 16:30–20:30
 </p>
+
+<div class="calendar-buttons">
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Donació+de+Sang+-+IES+Severo+Ochoa&dates=20260129T083000Z/20260129T193000Z&location=IES+Severo+Ochoa+Elx" target="_blank">📅 Google Calendar</a>
+  <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Donació de Sang - IES Severo Ochoa&startdt=2026-01-29T09:30&enddt=2026-01-29T20:30&location=IES Severo Ochoa Elx">💼 Outlook</a>
+  <a href="#" onclick="downloadICS()">🍎 Apple / iCal</a>
+</div>
+
+<iframe src="https://www.google.com/maps?q=IES+Severo+Ochoa+Elche&output=embed" loading="lazy"></iframe>
 </section>
 
 <footer>
@@ -263,13 +291,34 @@ setInterval(()=>{
   s.textContent = Math.floor(diff/1000%60);
 },1000);
 
-// FRASE FINAL ON SCROLL
+// FINAL PHRASE ANIMATION
 const phrase = document.getElementById("finalPhrase");
 window.addEventListener("scroll",()=>{
   if(phrase.getBoundingClientRect().top < window.innerHeight - 120){
     phrase.classList.add("show");
   }
 });
+
+// ICS
+function downloadICS(){
+  const data = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Donació de Sang - IES Severo Ochoa
+DTSTART:20260129T093000
+DTEND:20260129T203000
+LOCATION:IES Severo Ochoa Elx
+DESCRIPTION:Campanya de donació de sang
+END:VEVENT
+END:VCALENDAR`;
+  const blob = new Blob([data], { type: 'text/calendar' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "donacio_sang_severo_ochoa.ics";
+  a.click();
+  URL.revokeObjectURL(url);
+}
 </script>
 
 </body>
